@@ -1,0 +1,126 @@
+# CheaterCheck - Настройки читов
+# Список читов и длительность бана за них (в днях)
+# Используйте -1 для постоянного бана
+
+cheats:
+  # Клиенты и коллекции читов
+  Ares: 30
+  Aristois: 30
+  BleachHack: 30
+  CatLean: 30
+  Catalyst: 30
+  Impact: 30
+  LiquidBounce: 30
+  Meteor: 30
+  Wurst: 30
+  Inertia: 30
+  Neverhook: 30
+  "Clear Water": 14
+  Itami: 30
+  "Dark Light Client": 30
+  "Flux B11": 30
+  WWE: 30
+  Matix: 30
+  Nodus: 30
+  BlackHole: 30
+  Light: 30
+  Exist: 30
+  Sigma: 30
+  Jigsaw: 30
+  "KAMI Blue": 30
+  SalHack: 30
+  Seppuku: 30
+  SnowHack: 30
+  Zamorozka: 30
+  WeepCraft: 30
+  Future: 30
+  Konas: 30
+  RusherHack: 30
+  Gamesense: 30
+  CivBreaker: 30
+  Lambda: 30
+  Phobos: 30
+  Moon: 30
+  Hero: 30
+  Entropy: 30
+  Osium: 30
+  Koid: 30
+  Hanabi: 30
+  Spartan: 30
+  "Raven B+": 30
+  Nyx: 30
+  Purgatory: 30
+  "Chad Client": 30
+  Tenacity: 30
+  Helium: 30
+  
+  # Двигательные читы
+  Killaura: 30
+  KillAura: 30
+  AutoHit: 30
+  TriggerBot: 30
+  Reach: 30
+  Velocity: 14
+  AntiKnockback: 14
+  Speed: 14
+  Fly: 30
+  Flight: 30
+  NoFall: 14
+  AntiVoid: 14
+  Jesus: 14
+  WaterWalk: 14
+  Spider: 14
+  Phase: 30
+  NoClip: 30
+  Blink: 30
+  Step: 14
+  
+  # Читы для копания
+  Baritone: 14
+  AutoMine: 14
+  FastBreak: 14
+  Nuker: 30
+  VeinMiner: 14
+  
+  # Читы для предметов и инвентаря
+  ChestStealer: 14
+  AutoFish: 7
+  AutoTool: 7
+  Scaffold: 14
+  FastPlace: 14
+  AutoArmor: 14
+  AutoTotem: 14
+  AutoElytra: 14
+  AutoPotion: 14
+  AutoEat: 7
+  AutoRespawn: 7
+  FastInteract: 14
+  ItemTP: 30
+  
+  # Читы для информации и видимости
+  "X-Ray": 14
+  XRay: 14
+  ESP: 14
+  Tracers: 14
+  NameTags: 7
+  ChestESP: 14
+  EntityESP: 14
+  PlayerRadar: 14
+  FreeCam: 14
+  FullBright: 7
+  
+  # Другие читы
+  AntiAFK: 7
+  Timer: 14
+  FastLava: 14
+  GhostHand: 14
+  AutoReconnect: 7
+  Bypass: 30
+  AutoClicker: 14
+  MouseRecorder: 14
+  DoubleClicker: 14
+  ScrollClicker: 14
+  JitterClicker: 14
+  
+  # Неуказанные читы - по умолчанию
+  default: 14 
