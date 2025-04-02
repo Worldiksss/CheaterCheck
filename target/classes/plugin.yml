@@ -1,0 +1,128 @@
+name: CheaterCheck
+version: 1.0.0
+main: org.shavin.cheaterCheck.CheaterCheck
+api-version: 1.16
+description: Плагин для проверки игроков на читы
+author: Shavin
+website: https://github.com/Shavin
+
+commands:
+  cheatercheck:
+    description: Родительская команда плагина
+    usage: /cheatercheck <help/check/freeze/unfreeze/ss/ban/clean>
+    aliases: [cck]
+    permission: cheatercheck.admin
+  check:
+    description: Основная команда для управления проверками
+    usage: /check <help/start/stop/finish/reload/bypass/tpcheck>
+    aliases: [cc]
+    permission: cheatercheck.check
+  freeze:
+    description: Заморозить игрока
+    usage: /freeze <игрок>
+    permission: cheatercheck.freeze
+  unfreeze:
+    description: Разморозить игрока
+    usage: /unfreeze <игрок>
+    permission: cheatercheck.unfreeze
+  screenshare:
+    description: Запросить скриншер у игрока
+    usage: /screenshare <игрок>
+    aliases: [ss]
+    permission: cheatercheck.ss
+  setchecklocation:
+    description: Установить локацию для проверок
+    usage: /setchecklocation
+    permission: cheatercheck.admin
+  ss:
+    description: Алиас для команды screenshare
+    usage: /ss <игрок>
+    permission: cheatercheck.ss
+    aliases: []
+  anydesk:
+    description: Отправить код AnyDesk админам
+    usage: /anydesk <код>
+    permission: cheatercheck.use
+    aliases: []
+
+permissions:
+  cheatercheck.*:
+    description: Доступ ко всем командам плагина
+    default: op
+    children:
+      cheatercheck.admin: true
+      cheatercheck.bypass: true
+      cheatercheck.check: true
+      cheatercheck.reload: true
+  cheatercheck.check:
+    description: Доступ к команде /check
+    default: op
+  cheatercheck.check.start:
+    description: Доступ к команде /check start
+    default: op
+  cheatercheck.check.stop:
+    description: Доступ к команде /check stop
+    default: op
+  cheatercheck.check.finish:
+    description: Доступ к команде /check finish
+    default: op
+  cheatercheck.freeze:
+    description: Доступ к команде /freeze
+    default: op
+  cheatercheck.unfreeze:
+    description: Доступ к команде /unfreeze
+    default: op
+  cheatercheck.screenshare:
+    description: Доступ к команде /screenshare
+    default: op
+  cheatercheck.reload:
+    description: Доступ к команде /check reload
+    default: op
+  cheatercheck.bypass:
+    description: Доступ к командам bypass и возможность избегать проверки
+    default: op
+  cheatercheck.bypass.immunity:
+    description: Иммунитет к проверкам (игрок не может быть вызван на проверку)
+    default: false
+  cheatercheck.admin:
+    description: Полный доступ ко всем функциям администратора
+    default: op
+    children:
+      cheatercheck.bypass: true
+      cheatercheck.check: true
+      cheatercheck.check.forcecheck: true
+      cheatercheck.reload: true
+      cheatercheck.webhook: true
+  cheatercheck.notifications:
+    description: Получение уведомлений о начале и завершении проверок
+    default: op
+  check.admin:
+    description: Полные права администратора плагина
+    default: op
+    children:
+      cheatercheck.check: true
+      cheatercheck.check.start: true
+      cheatercheck.check.stop: true
+      cheatercheck.check.finish: true
+      cheatercheck.check.bypass: true
+      cheatercheck.check.bypass.add: true
+      cheatercheck.check.bypass.remove: true
+      cheatercheck.check.bypass.list: true
+      cheatercheck.check.timestop: true
+      cheatercheck.check.timeadd: true
+      cheatercheck.reload: true
+      cheatercheck.freeze: true
+      cheatercheck.unfreeze: true
+      cheatercheck.ss: true
+  check.timestop:
+    description: Право на остановку таймера проверки
+    default: op
+  check.timeadd:
+    description: Право на добавление времени к проверке
+    default: op
+  cheatercheck.webhook:
+    description: Разрешение на управление Discord вебхуком
+    default: op
+  cheatercheck.tpcheck:
+    description: Право на установку точки телепортации для проверки
+    default: op
